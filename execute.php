@@ -8,9 +8,9 @@ header('Content-Type: application/json');
 $command = $_POST['command'];
 
 // Konfigurace pro RCON
-$server = '127.0.0.1'; // IP adresa vašeho Minecraft serveru
+$server = 'eu01.actinium.pt'; // IP adresa vašeho Minecraft serveru
 $port = 25575;         // RCON port vašeho Minecraft serveru (standardně 25575)
-$password = 'your_rcon_password';  // Heslo RCON na vašem Minecraft serveru
+$password = 'rychve';  // Heslo RCON na vašem Minecraft serveru
 
 $rcon = new McClassicRcon($server, $port, $password);
 
