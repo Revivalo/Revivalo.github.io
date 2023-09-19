@@ -1,1 +1,34 @@
-Rejchve
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Command Executor</title>
+</head>
+<body>
+    <input type="text" id="command" placeholder="Zadejte příkaz...">
+    <button onclick="sendCommand()">Odeslat</button>
+
+    <script>
+        function sendCommand() {
+            const command = document.getElementById("command").value;
+
+            fetch('execute.php', {
+                method: 'POST',
+                body: JSON.stringify({ command: command }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.success) {
+                    alert("Příkaz byl úspěšně odeslán!");
+                } else {
+                    alert("Nastala chyba: " + data.error);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
