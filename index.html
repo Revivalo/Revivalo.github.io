@@ -49,12 +49,27 @@
             </a>
           </li>
           <li>
-            <a target="_blank" onclick="">
-             
-              <i class="fa fa-discord"></i>
+            <a href="javascript:void(0);" onclick="copyDiscordId()">
+                <i class="fa fa-discord"></i>
             </a>
           </li>
         </ul>
       </aside>
+
+      <script>
+        function copyToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+        }
+        
+        function copyDiscordId() {
+            copyToClipboard('Revivalo#0001');
+            alert('Discord ID zkopírováno do schránky!');
+        }
+    </script>
 </body>
 </html>
