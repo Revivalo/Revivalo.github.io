@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revivalo</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/24b22916c8.js" crossorigin="anonymous"></script>
 </head>
@@ -53,6 +54,11 @@
                 <i class="fa-brands fa-discord"></i>
             </a>
           </li>
+          <li>
+            <a href="javascript:void(0);" onclick="copyMail()">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+          </li>
         </ul>
       </aside>
 
@@ -69,6 +75,11 @@
         function copyDiscordId() {
             copyToClipboard('Revivalo#0001');
             alert('Discord ID zkopírováno do schránky!');
+        }
+
+        function copyMail() {
+            copyToClipboard('revivalo@athelion.eu');
+            alert('Emailová adresa byla zkopírována do schránky!');
         }
     </script>
 </body>
