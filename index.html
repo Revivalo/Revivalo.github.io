@@ -3,32 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft Command Executor</title>
+    <title>Revivalo</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <input type="text" id="command" placeholder="Zadejte příkaz...">
-    <button onclick="sendCommand()">Odeslat</button>
-
-    <script>
-        function sendCommand() {
-            const command = document.getElementById("command").value;
-
-            fetch('execute.php', {
-                method: 'POST',
-                body: JSON.stringify({ command: command }),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if(data.success) {
-                    alert("Příkaz byl úspěšně odeslán!");
-                } else {
-                    alert("Nastala chyba: " + data.error);
-                }
-            });
-        }
-    </script>
+    <aside class="profile-card">
+        <header>
+          <!-- here’s the avatar -->
+          <a target="_blank" href="#">
+            <img src="http://lorempixel.com/150/150/people/" class="hoverZoomLink">
+          </a>
+      
+          <!-- the username -->
+          <h1>
+                  John Doe
+                </h1>
+      
+          <!-- and role or location -->
+          <h2>
+                  Better Visuals
+                </h2>
+      
+        </header>
+      
+        <!-- bit of a bio; who are you? -->
+        <div class="profile-bio">
+      
+          <p>
+            It takes monumental improvement for us to change how we live our lives. Design is the way we access that improvement.
+          </p>
+      
+        </div>
+      
+        <!-- some social links to show off -->
+        <ul class="profile-social-links">
+          <li>
+            <a target="_blank" href="https://www.facebook.com/creativedonut">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://twitter.com/dropyourbass">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://github.com/vipulsaxena">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.behance.net/vipulsaxena">
+             
+              <i class="fa fa-behance"></i>
+            </a>
+          </li>
+        </ul>
+      </aside>
 </body>
 </html>
