@@ -43,7 +43,7 @@ Draw._lines = function() {
     }
 
     for (var i=0; i<Game.SIZE+1; i++) {
-        var x = this.LINE/2 + i*this.CELL;
+        var y = this.LINE/2 + i*this.CELL;
         this._context.moveTo(0, y);
         this._context.lineTo(this._context.canvas.height, y);
     }
@@ -77,10 +77,10 @@ Draw._cell = function(x, y, count) {
             this._atom(x + this.CELL * 3/4, y + this.CELL * 3/4);
             break;
         case 4:
-            this._aton(x + this.CELL/4, y + this.CELL/4);
-            this._aton(x + this.CELL*3/4, y + this.CELL*3/4);
-            this._aton(x + this.CELL/4, y + this.CELL*3/4);
-            this._aton(x + this.CELL*3/4, y + this.CELL/4);
+            this._atom(x + this.CELL/4, y + this.CELL/4);
+            this._atom(x + this.CELL*3/4, y + this.CELL*3/4);
+            this._atom(x + this.CELL/4, y + this.CELL*3/4);
+            this._atom(x + this.CELL*3/4, y + this.CELL/4);
             break;
     }
 }
