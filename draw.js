@@ -85,7 +85,7 @@ Draw._cell = function(x, y, count) {
     }
 }
 
-Draw._atom() = function(x, y) {
+Draw._atom = function(x, y) {
     this._context.beginPath();
 
     this._context.moveTo(x+this.ATOM, y);
