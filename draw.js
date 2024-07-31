@@ -108,5 +108,5 @@ Draw.getPosition = function(cursorX, cursorY) {
     var cellX = Math.floor(cursorX / this.CELL);
     var cellY = Math.floor(cursorY / this.CELL);
 
-    return [cellX, cellY];0
+    return [cellX, cellY];
 }
